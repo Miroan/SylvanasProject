@@ -3,6 +3,11 @@
 $shadow       : 1px 1px 4px 0 rgba(0,0,0,0.5);
 $text-shadow  : 2px 2px 2px rgb(0,0,0);
 
+@mixin bg {
+  border: 1px solid darken($sdark, 5%);
+  background: darken($sdark, 5%);
+}
+
 //Bootstrap Changes
 
 @media (min-width: 34em) {
@@ -10,13 +15,11 @@ $text-shadow  : 2px 2px 2px rgb(0,0,0);
     max-width: 64rem;
   }
 }
-
 //Website
 
 body {
-  background: url(../img/background.jpg) no-repeat;
+  background: url(../img/background.jpg) no-repeat fixed;
   background-size: 100% auto;
-  background-attachment: fixed;
 }
 
 .slider {
@@ -34,12 +37,11 @@ body {
 
 .news {
   margin:20px 0;
-  .col-sm-12 {
+  .article {
     margin: .5rem;
-    border: 1px solid darken($sdark, 5%);
     box-shadow: $shadow;
     transition: all 0.5s ease;
-    background: darken($sdark, 5%);
+    @include bg;
     img {
       margin-top: 1rem;
       width: 100%;
@@ -53,6 +55,93 @@ body {
     &:hover {
       cursor: pointer;
       background: darken($sdark, 2%);
+    }
+  }
+}
+
+//Sidebar
+
+.site-sidebar {
+  margin: 20px 0;
+  .row:nth-child(3) {
+    margin-top: 1rem;
+  }
+}
+
+.sub-navigation {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin: 10px 0 0;
+      box-shadow: $shadow;
+      a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        transition: all 0.5s ease;
+        @include bg;
+        color: $lgrey;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          cursor: pointer;
+          background: darken($sdark, 2%);
+          color: $whitten;
+        }
+        &:before {
+          margin-right: 20px;
+          background-position: 0 1px;
+        }
+      }
+    }
+  }
+}
+
+.site-blocks {
+  .span {
+    @include bg;
+    box-shadow: $shadow;
+  }
+  h6 {
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+  }
+  tr {
+    border-top: 1px solid darken($sdark, 3%);
+    transition: all 0.5s ease;
+    &:hover {
+      background: darken($sdark, 2%);
+      cursor: pointer;
+    }
+  }
+  tr:last-of-type {
+    border-bottom: 1px solid darken($sdark, 3%);
+  }
+  th, td {
+    border-top: 0;
+    padding: .5rem;
+  }
+  td.viewers:before {
+      content: " ";
+      background: url(../svg/0207-eye.svg) 0 3px no-repeat;
+      background-size: 16px 16px;
+      float: right;
+      width: 18px;
+      height: 20px;
+      margin-left:10px;
+  }
+  td.versus:before {
+      content: " ";
+      background: url(../svg/0302-loop.svg) 0 5px no-repeat;
+      background-size: 12px 12px;
+      float: left;
+      width: 18px;
+      height: 18px;
+  }
+  .games {
+    .flag:before {
+      margin-right: 10px;
     }
   }
 }

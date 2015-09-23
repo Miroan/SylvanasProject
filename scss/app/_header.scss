@@ -13,8 +13,9 @@
       margin:0 0.5rem;
       padding: 0.8rem 0.5rem;
       color: lighten($gblue, 50%);
+      transition: all 0.5s ease;
       &:hover {
-        color: $lgblue;
+        color: lighten($gblue, 60%);
       }
     }
     a:nth-last-of-type {
@@ -24,10 +25,10 @@
 }
 
 //mobile
-.site-icons {
+.site-icons, .sub-navigation {
   a:before {
     content: " ";
-    display: inline-block;
+    float: left;
     width: 20px;
     height:20px;
   }
