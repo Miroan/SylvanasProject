@@ -1,0 +1,9 @@
+.idea
+bower_components
+node_modules
+*.map
+*.exe
+*.dll
+*.zip
+*.rar
+*.json

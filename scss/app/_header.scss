@@ -1,0 +1,46 @@
+@import "extensions/colors";
+
+.site-header {
+  background: $dark;
+  //box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.8);
+  .logo {
+    img {
+      height: 50px;
+    }
+  }
+  .navigation nav {
+    a {
+      margin:0 0.5rem;
+      padding: 0.8rem 0.5rem;
+      color: lighten($gblue, 50%);
+      &:hover {
+        color: $lgblue;
+      }
+    }
+    a:nth-last-of-type {
+      margin:0 0 0 1rem;
+    }
+  }
+}
+
+//mobile
+.site-icons {
+  a:before {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height:20px;
+  }
+  .trophy:before {
+    background: url(../svg/0159-trophy.svg) no-repeat;
+    background-size: 20px 20px;
+  }
+  .rocket:before {
+    background: url(../svg/0166-rocket.svg) no-repeat;
+    background-size: 20px 20px;
+  }
+  .info:before {
+    background: url(../svg/0269-info.svg) no-repeat;
+    background-size: 20px 20px;
+  }
+}

@@ -1,0 +1,58 @@
+@import "extensions/colors";
+
+$shadow       : 1px 1px 4px 0 rgba(0,0,0,0.5);
+$text-shadow  : 2px 2px 2px rgb(0,0,0);
+
+//Bootstrap Changes
+
+@media (min-width: 34em) {
+  .container {
+    max-width: 64rem;
+  }
+}
+
+//Website
+
+body {
+  background: url(../img/background.jpg) no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.slider {
+  //margin-top: 20px;
+  padding: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.site-content {
+  background: $sdark;
+  color: $lgrey;
+}
+
+.news {
+  margin:20px 0;
+  .col-sm-12 {
+    margin: .5rem;
+    border: 1px solid darken($sdark, 5%);
+    box-shadow: $shadow;
+    transition: all 0.5s ease;
+    background: darken($sdark, 5%);
+    img {
+      margin-top: 1rem;
+      width: 100%;
+      box-shadow: $shadow;
+    }
+    h2 {
+      margin-top: 1rem ;
+      color: lighten($lgrey, 20%) ;
+      text-shadow: $text-shadow;
+    }
+    &:hover {
+      cursor: pointer;
+      background: darken($sdark, 2%);
+    }
+  }
+}
