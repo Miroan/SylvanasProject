@@ -8,6 +8,16 @@ $text-shadow  : 2px 2px 2px rgb(0,0,0);
   background: darken($sdark, 5%);
 }
 
+@mixin icon ($image-name, $bg-pos, $width, $height, $float) {
+  $image-path : '../svg';
+  content: " ";
+  background: url(#{$image-path}/#{$image-name}.svg) 0 $bg-pos no-repeat;
+  background-size: $width $height;
+  float: $float;
+  width: 18px;
+  height: 18px;
+}
+
 //Bootstrap Changes
 
 @media (min-width: 34em) {
@@ -63,7 +73,10 @@ body {
 
 .site-sidebar {
   margin: 20px 0;
-  .row:nth-child(3) {
+  .row:nth-child(3),
+  .row:nth-child(4),
+  .row:nth-child(5),
+  .row:nth-child(6){
     margin-top: 1rem;
   }
 }
@@ -123,25 +136,49 @@ body {
     padding: .5rem;
   }
   td.viewers:before {
-      content: " ";
-      background: url(../svg/0207-eye.svg) 0 3px no-repeat;
-      background-size: 16px 16px;
-      float: right;
-      width: 18px;
-      height: 20px;
-      margin-left:10px;
+    @include icon('0207-eye',3px,16px,16px,right);
+    margin-left:10px;
+  }
+  td.icon-events:before {
+    @include icon('0084-calendar',3px,14px,14px,right);
+    margin-left:10px;
+  }
+  td.icon-news:before {
+    @include icon('0005-newspaper',3px,16px,16px,right);
+    margin-left:10px;
   }
   td.versus:before {
-      content: " ";
-      background: url(../svg/0302-loop.svg) 0 5px no-repeat;
-      background-size: 12px 12px;
-      float: left;
-      width: 18px;
-      height: 18px;
+    @include icon('0302-loop',5px,12px,12px,left);
+  }
+
+  td.rating-up:before {
+    @include icon('0307-arrow-up',5px,12px,12px,left);
+  }
+
+  td.rating-down:before {
+    @include icon('0311-arrow-down',5px,12px,12px,left);
+  }
+
+  td.rating-hold:before {
+    @include icon('0268-minus',5px,12px,12px,left);
   }
   .games {
     .flag:before {
       margin-right: 10px;
     }
   }
+}
+
+//Label colors
+.rar-common {
+  color: $whitten;
+}
+.rar-rare {
+  color: $blue;
+}
+.rar-epic {
+  color: $purple;
+}
+.rar-legend {
+  color: $orange;
 }
