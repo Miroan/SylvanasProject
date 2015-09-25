@@ -1,0 +1,35 @@
+{
+  "collection" : [
+    {
+      "id"         : "1",
+      "CardName"   : "Dr. Boom",
+      "Rarity"     : "legend",
+      "Set"        : "gvg",
+      "Banned"     : "Yes"
+    }, {
+      "id"         : "2",
+      "CardName"   : "Grim Patron",
+      "Rarity"     : "rare",
+      "Set"        : "tbm",
+      "Banned"     : "Yes"
+    }, {
+      "id"         : "3",
+      "CardName"   : "Mysterious Challenger",
+      "Rarity"     : "epic",
+      "Set"        : "tgt",
+      "Banned"     : "Yes"
+    }, {
+      "id"         : "4",
+      "CardName"   : "Leper Gnome",
+      "Rarity"     : "common",
+      "Set"        : "exp",
+      "Banned"     : "Yes"
+    }, {
+      "id"         : "5",
+      "CardName"   : "Sylvanas Windrunner",
+      "Rarity"     : "legend",
+      "Set"        : "epx",
+      "Banned"     : "Yes"
+    }
+  ]
+}

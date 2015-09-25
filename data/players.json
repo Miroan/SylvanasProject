@@ -1,0 +1,135 @@
+{
+  "players" : [
+    {
+      "id"      : "1",
+      "Name"    : "Kolento",
+      "Country" : "ua",
+      "Rating"    : "1390",
+      "Change"  : "rating-up",
+      "winrate" : [
+        {
+          "wins"    : "6",
+          "loses"   : "2",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "2",
+      "Name"    : "Lifecoach",
+      "Country" : "de",
+      "Rating"    : "1355",
+      "Change"  : "rating-down",
+      "winrate" : [
+        {
+          "wins"    : "5",
+          "loses"   : "3",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "3",
+      "Name"    : "StrifeCro",
+      "Country" : "us",
+      "Rating"  : "1210",
+      "Change"  : "rating-hold",
+      "winrate" : [
+        {
+          "wins"    : "3",
+          "loses"   : "0",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "4",
+      "Name"    : "Dog",
+      "Country" : "us",
+      "Rating"  : "1270",
+      "Change"  : "rating-up",
+      "winrate" : [
+        {
+          "wins"    : "3",
+          "loses"   : "1",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "5",
+      "Name"    : "Trump",
+      "Country" : "us",
+      "Rating"    : "1270",
+      "Change"  : "rating-down",
+      "winrate" : [
+        {
+          "wins"    : "4",
+          "loses"   : "2",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "6",
+      "Name"    : "Purple",
+      "Country" : "us",
+      "Rating"  : "1272",
+      "Change"  : "rating-hold",
+      "winrate" : [
+        {
+          "wins"    : "7",
+          "loses"   : "6",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "7",
+      "Name"    : "Pavel",
+      "Country" : "ru",
+      "Rating"  : "1344",
+      "Change"  : "rating-up",
+      "winrate" : [
+        {
+          "wins"    : "6",
+          "loses"   : "1",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "8",
+      "Name"    : "Kranich",
+      "Country" : "sk",
+      "Rating"    : "1123",
+      "Change"  : "rating-hold",
+      "winrate" : [
+        {
+          "wins"    : "3",
+          "loses"   : "1",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "9",
+      "Name"    : "IcySunrise",
+      "Country" : "ua",
+      "Rating"  : "1288",
+      "Change"  : "rating-down",
+      "winrate" : [
+        {
+          "wins"    : "3",
+          "loses"   : "0",
+          "drafts"  : "0"
+        }
+      ]
+    }, {
+      "id"      : "10",
+      "Name"    : "Animezis",
+      "Country" : "ua",
+      "Rating"  : "1111",
+      "Change"  : "rating-down",
+      "winrate" : [
+        {
+          "wins"    : "5",
+          "loses"   : "1",
+          "drafts"  : "0"
+        }
+      ]
+    }
+  ]
+}
