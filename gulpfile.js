@@ -7,7 +7,21 @@ var concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     jade = require('jade'),
     gulpJade = require('gulp-jade'),
-    katex = require('katex');
+    katex = require('katex'),
+    uglify = require('gulp-uglify'),
+    jshint = require('gulp-jshint'),
+    gutil = require('gulp-util');
+
+gulp.task('javascript', function() {
+    gulp.src([
+        'bower_components/angular/angular.js'
+        ])
+        .pipe(uglify())
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest('repo/js'))
+        .pipe(size())
+        .on('error', gutil.log)
+});
 
 gulp.task('sass', function () {
     gulp.src('scss/*.scss')
