@@ -54,23 +54,11 @@
                         .col-sm-12
                             .span
                                 h6 Banned Cards This Week
-                                table.table
+                                table.table(ng-controller="cardList")
                                     tbody
-                                        tr
-                                            th(scope='row') 1
-                                            td.rar-legend Dr. Boom
-                                        tr
-                                            th(scope='row') 2
-                                            td.rar-rare Grim Patron
-                                        tr
-                                            th(scope='row') 3
-                                            td.rar-epic Mysterious Challenger
-                                        tr
-                                            th(scope='row') 4
-                                            td.rar-common Leper Gnome
-                                        tr
-                                            th(scope='row') 5
-                                            td.rar-legend Sylvanas Windrunner
+                                        tr(ng-repeat="x in cards | limitTo:5 track by $index")
+                                            th(scope="row" ng-bind="$index+1")
+                                            td(ng-bind="x.CardName" ng-class="'rar-' + x.Rarity")
                     .row.site-blocks
                         .col-sm-12
                             .span
@@ -110,58 +98,13 @@
                         .col-sm-12
                             .span
                                 h6 Hearthstone Rankings
-                                table.table.games
+                                table.table.games(ng-controller="playersLadder")
                                     tbody
-                                        tr
-                                            th(scope='row') 1
-                                            td.flag.flag-ua Kolento
-                                            td.rating-up
-                                            td 1231
-                                        tr
-                                            th(scope='row') 2
-                                            td.flag.flag-ru Pavel
-                                            td.rating-hold
-                                            td 1230
-                                        tr
-                                            th(scope='row') 3
-                                            td.flag.flag-ua IcySunrise
-                                            td.rating-up
-                                            td 1180
-                                        tr
-                                            th(scope='row') 4
-                                            td.flag.flag-de Lifecoach
-                                            td.rating-down
-                                            td 1191
-                                        tr
-                                            th(scope='row') 5
-                                            td.flag.flag-us Dog
-                                            td.rating-hold
-                                            td 1173
-                                        tr
-                                            th(scope='row') 6
-                                            td.flag.flag-us Animezis
-                                            td.rating-up
-                                            td 1122
-                                        tr
-                                            th(scope='row') 7
-                                            td.flag.flag-pl M3krr
-                                            td.rating-down
-                                            td 1098
-                                        tr
-                                            th(scope='row') 8
-                                            td.flag.flag-ca Amaz
-                                            td.rating-down
-                                            td 1034
-                                        tr
-                                            th(scope='row') 9
-                                            td.flag.flag-us Trump
-                                            td.rating-hold
-                                            td 1022
-                                        tr
-                                            th(scope='row') 10
-                                            td.flag.flag-cn Choi
-                                            td.rating-up
-                                            td 1007
+                                        tr(ng-repeat="x in ladder | limitTo:10 | orderBy:'Country' track by $index")
+                                            th(scope="row" ng-bind="$index+1")
+                                            td(ng-bind="x.Name" ng-class="'flag-' + x.Country").flag
+                                            td(ng-class="x.Change")
+                                            td(ng-bind="x.Rating")
                     .row.site-blocks
                         .col-sm-12
                             .span
