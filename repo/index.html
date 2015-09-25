@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <title>Sylvannas Tourney Website</title>
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
@@ -88,27 +87,11 @@
                 <div class="col-sm-12">
                   <div class="span">
                     <h6>Banned Cards This Week</h6>
-                    <table class="table">
+                    <table ng-controller="cardList" class="table">
                       <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td class="rar-legend">Dr. Boom</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td class="rar-rare">Grim Patron</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td class="rar-epic">Mysterious Challenger</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td class="rar-common">Leper Gnome</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td class="rar-legend">Sylvanas Windrunner</td>
+                        <tr ng-repeat="x in cards | limitTo:5 track by $index">
+                          <th scope="row" ng-bind="$index+1"></th>
+                          <td ng-bind="x.CardName" ng-class="'rar-' + x.Rarity"></td>
                         </tr>
                       </tbody>
                     </table>
@@ -166,67 +149,13 @@
                 <div class="col-sm-12">
                   <div class="span">
                     <h6>Hearthstone Rankings</h6>
-                    <table class="table games">
+                    <table ng-controller="playersLadder" class="table games">
                       <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td class="flag flag-ua">Kolento</td>
-                          <td class="rating-up"></td>
-                          <td>1231</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td class="flag flag-ru">Pavel</td>
-                          <td class="rating-hold"></td>
-                          <td>1230</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td class="flag flag-ua">IcySunrise</td>
-                          <td class="rating-up"></td>
-                          <td>1180</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td class="flag flag-de">Lifecoach</td>
-                          <td class="rating-down"></td>
-                          <td>1191</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td class="flag flag-us">Dog</td>
-                          <td class="rating-hold"></td>
-                          <td>1173</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">6</th>
-                          <td class="flag flag-us">Animezis</td>
-                          <td class="rating-up"></td>
-                          <td>1122</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">7</th>
-                          <td class="flag flag-pl">M3krr</td>
-                          <td class="rating-down"></td>
-                          <td>1098</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">8</th>
-                          <td class="flag flag-ca">Amaz</td>
-                          <td class="rating-down"></td>
-                          <td>1034</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">9</th>
-                          <td class="flag flag-us">Trump</td>
-                          <td class="rating-hold"></td>
-                          <td>1022</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">10</th>
-                          <td class="flag flag-cn">Choi</td>
-                          <td class="rating-up"></td>
-                          <td>1007</td>
+                        <tr ng-repeat="x in ladder | limitTo:10 | orderBy:'Country' track by $index">
+                          <th scope="row" ng-bind="$index+1"></th>
+                          <td ng-bind="x.Name" ng-class="'flag-' + x.Country" class="flag"></td>
+                          <td ng-class="x.Change"></td>
+                          <td ng-bind="x.Rating"></td>
                         </tr>
                       </tbody>
                     </table>
@@ -261,5 +190,7 @@
         </div>
       </div>
     </div>
+    <script src="js/app.min.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
