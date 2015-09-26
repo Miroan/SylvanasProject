@@ -63,23 +63,13 @@
                         .col-sm-12
                             .span
                                 h6 Live Streams
-                                table.table
+                                table.table(ng-controller="playersLadder")
                                     tbody
-                                        tr
+                                        tr(ng-repeat="n in ladder | limitTo:3 | orderBy:'LiveStream[0].watchers'")
                                             td
-                                                span.flag.flag-ua
-                                            td Kolento
-                                            td.hidden-md-down.text-right.viewers 16321
-                                        tr
-                                            td
-                                                span.flag.flag-de
-                                            td Lifecoach
-                                            td.hidden-md-down.text-right.viewers 423
-                                        tr
-                                            td
-                                                span.flag.flag-us
-                                            td Animezis
-                                            td.hidden-md-down.text-right.viewers 3
+                                                span(ng-class="'flag-' + n.Country").flag
+                                            td(ng-bind="n.Name")
+                                            td(ng-bind="n.LiveStream[0].watchers").hidden-md-down.text-right.viewers
                     .row.site-blocks
                         .col-sm-12
                             .span
@@ -100,11 +90,11 @@
                                 h6 Hearthstone Rankings
                                 table.table.games(ng-controller="playersLadder")
                                     tbody
-                                        tr(ng-repeat="x in ladder | limitTo:10 | orderBy:'Country' track by $index")
+                                        tr(ng-repeat="x in ladder | limitTo:10 | orderBy:'-Score[0].Rating' track by $index")
                                             th(scope="row" ng-bind="$index+1")
                                             td(ng-bind="x.Name" ng-class="'flag-' + x.Country").flag
-                                            td(ng-class="x.Change")
-                                            td(ng-bind="x.Rating")
+                                            td(ng-class="x.Score[0].Change")
+                                            td(ng-bind="x.Score[0].Rating")
                     .row.site-blocks
                         .col-sm-12
                             .span
