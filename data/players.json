@@ -4,8 +4,18 @@
       "id"      : "1",
       "Name"    : "Kolento",
       "Country" : "ua",
-      "Rating"    : "1390",
-      "Change"  : "rating-up",
+      "Score"   : [
+        {
+          "Rating"    : "1390",
+          "Change"  : "rating-up"
+        }
+      ],
+      "LiveStream" :[
+        {
+        "online"    : "yes",
+        "watchers"  : "11397"
+      }
+      ],
       "winrate" : [
         {
           "wins"    : "6",
@@ -17,8 +27,18 @@
       "id"      : "2",
       "Name"    : "Lifecoach",
       "Country" : "de",
-      "Rating"    : "1355",
-      "Change"  : "rating-down",
+      "Score"   : [
+        {
+          "Rating"    : "1355",
+          "Change"  : "rating-down"
+        }
+      ],
+      "LiveStream" :[
+        {
+          "online"    : "yes",
+          "watchers"  : "3981"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "5",
@@ -30,8 +50,18 @@
       "id"      : "3",
       "Name"    : "StrifeCro",
       "Country" : "us",
-      "Rating"  : "1210",
-      "Change"  : "rating-hold",
+      "Score"   : [
+        {
+          "Rating"    : "1210",
+          "Change"  : "rating-hold"
+        }
+      ],
+      "LiveStream" :[
+        {
+          "online"    : "yes",
+          "watchers"  : "539"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "3",
@@ -43,8 +73,12 @@
       "id"      : "4",
       "Name"    : "Dog",
       "Country" : "us",
-      "Rating"  : "1270",
-      "Change"  : "rating-up",
+      "Score"   : [
+        {
+          "Rating"    : "1270",
+          "Change"  : "rating-up"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "3",
@@ -56,8 +90,18 @@
       "id"      : "5",
       "Name"    : "Trump",
       "Country" : "us",
-      "Rating"    : "1270",
-      "Change"  : "rating-down",
+      "Score"   : [
+        {
+          "Rating"    : "1270",
+          "Change"  : "rating-down"
+        }
+      ],
+      "LiveStream" :[
+        {
+          "online"    : "yes",
+          "watchers"  : "22997"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "4",
@@ -69,8 +113,12 @@
       "id"      : "6",
       "Name"    : "Purple",
       "Country" : "us",
-      "Rating"  : "1272",
-      "Change"  : "rating-hold",
+      "Score"   : [
+        {
+          "Rating"    : "1272",
+          "Change"  : "rating-hold"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "7",
@@ -82,8 +130,12 @@
       "id"      : "7",
       "Name"    : "Pavel",
       "Country" : "ru",
-      "Rating"  : "1344",
-      "Change"  : "rating-up",
+      "Score"   : [
+        {
+          "Rating"    : "1344",
+          "Change"  : "rating-up"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "6",
@@ -95,8 +147,12 @@
       "id"      : "8",
       "Name"    : "Kranich",
       "Country" : "sk",
-      "Rating"    : "1123",
-      "Change"  : "rating-hold",
+      "Score"   : [
+        {
+          "Rating"    : "1123",
+          "Change"  : "rating-hold"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "3",
@@ -108,8 +164,12 @@
       "id"      : "9",
       "Name"    : "IcySunrise",
       "Country" : "ua",
-      "Rating"  : "1288",
-      "Change"  : "rating-down",
+      "Score"   : [
+        {
+          "Rating"    : "1288",
+          "Change"  : "rating-down"
+        }
+      ],
       "winrate" : [
         {
           "wins"    : "3",
@@ -120,13 +180,23 @@
     }, {
       "id"      : "10",
       "Name"    : "Animezis",
-      "Country" : "ua",
-      "Rating"  : "1111",
-      "Change"  : "rating-down",
+      "Country" : "us",
+      "Score"   : [
+        {
+          "Rating"    : "1008",
+          "Change"  : "rating-down"
+        }
+      ],
+      "LiveStream" :[
+        {
+          "online"    : "yes",
+          "watchers"  : "3"
+        }
+      ],
       "winrate" : [
         {
-          "wins"    : "5",
-          "loses"   : "1",
+          "wins"    : "3",
+          "loses"   : "0",
           "drafts"  : "0"
         }
       ]
