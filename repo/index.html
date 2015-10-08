@@ -15,7 +15,9 @@
         </div>
       </div>
       <div class="container hidden-md-up">
-        <div class="col-xs-4 logo"><img src="img/temp-logo-mobile.png"></div>
+        <div class="col-xs-4 navigation">
+          <nav class="pull-left site-icons"><a href="#" class="nav-link menu"></a></nav>
+        </div>
         <div class="col-xs-8 navigation">
           <nav class="pull-right site-icons"><a href="#" class="nav-link trophy"></a><a href="#" class="nav-link rocket"></a><a href="#" class="nav-link info"></a></nav>
         </div>
@@ -102,22 +104,12 @@
                 <div class="col-sm-12">
                   <div class="span">
                     <h6>Live Streams</h6>
-                    <table class="table">
+                    <table ng-controller="playersLadder" class="table">
                       <tbody>
-                        <tr>
-                          <td><span class="flag flag-ua"></span></td>
-                          <td>Kolento</td>
-                          <td class="hidden-md-down text-right viewers">16321</td>
-                        </tr>
-                        <tr>
-                          <td><span class="flag flag-de"></span></td>
-                          <td>Lifecoach</td>
-                          <td class="hidden-md-down text-right viewers">423</td>
-                        </tr>
-                        <tr>
-                          <td><span class="flag flag-us"></span></td>
-                          <td>Animezis</td>
-                          <td class="hidden-md-down text-right viewers">3</td>
+                        <tr ng-repeat="n in ladder | limitTo:5 | orderBy:'-LiveStream[0].Watchers'">
+                          <td><span ng-class="'flag-' + n.Country" class="flag"></span></td>
+                          <td ng-bind="n.Name"></td>
+                          <td ng-bind="n.LiveStream[0].Watchers" class="hidden-md-down text-right viewers"></td>
                         </tr>
                       </tbody>
                     </table>
@@ -151,11 +143,11 @@
                     <h6>Hearthstone Rankings</h6>
                     <table ng-controller="playersLadder" class="table games">
                       <tbody>
-                        <tr ng-repeat="x in ladder | limitTo:10 | orderBy:'Country' track by $index">
+                        <tr ng-repeat="x in ladder | limitTo:10 | orderBy:'-Score[0].Rating' track by $index">
                           <th scope="row" ng-bind="$index+1"></th>
                           <td ng-bind="x.Name" ng-class="'flag-' + x.Country" class="flag"></td>
-                          <td ng-class="x.Change"></td>
-                          <td ng-bind="x.Rating"></td>
+                          <td ng-class="x.Score[0].Change"></td>
+                          <td ng-bind="x.Score[0].Rating"></td>
                         </tr>
                       </tbody>
                     </table>
@@ -184,6 +176,41 @@
                     </table>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-8 video-slider">
+          <div class="col-sm-12 video-frame">
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/xuSrwcoinrw?rel=0&amp;amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 video-list">
+          <div class="row site-blocks">
+            <div class="col-sm-12">
+              <div class="span">
+                <h6>Latest Videos</h6>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td class="video-title">Hearthstone: Sylvanas Cup #1 - Nazgul vs Petruha - Game 1</td>
+                    </tr>
+                    <tr>
+                      <td class="video-title">Hearthstone: Sylvanas Cup #1 - Nazgul vs Petruha - Game 2</td>
+                    </tr>
+                    <tr>
+                      <td class="video-title">Hearthstone: Sylvanas Cup #1 - Nazgul vs Petruha - Game 3</td>
+                    </tr>
+                    <tr>
+                      <td class="video-title">Hearthstone: Sylvanas Cup #1 - Nazgul vs Petruha - Game 3</td>
+                    </tr>
+                    <tr>
+                      <td class="video-title">Hearthstone: Sylvanas Cup #1 - Nazgul vs Petruha - Game 3</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
