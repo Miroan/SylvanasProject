@@ -20,11 +20,16 @@ $text-shadow  : 2px 2px 2px rgba(0,0,0,0.8);
 
 //Bootstrap Changes
 
+
 @media (min-width: 34em) {
   .container {
     max-width: 64rem;
   }
+  .col-sm-12.article {
+    width: auto;
+  }
 }
+
 //Website
 
 body {
@@ -40,9 +45,31 @@ body {
   }
 }
 
+.video-slider {
+  padding: 0 1.5rem;
+}
+
+//Youtube Video Responsive Frame
+
+.video-frame {
+  margin: 0 0 1rem;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+  box-shadow: $shadow;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .site-content {
   background: $Grey900;
   color: $lgrey;
+  box-shadow: 2px 0 2px 0 rgba(0,0,0,0.8), -2px 0 2px 0 rgba(0,0,0,0.8);;
 }
 
 .news {
@@ -83,6 +110,11 @@ body {
   .row:nth-child(6){
     margin-top: 1rem;
   }
+}
+
+.site-sidebar > div,
+.video-list > div {
+  padding: 0 .5rem 0 0;
 }
 
 .sub-navigation {
@@ -166,6 +198,12 @@ body {
   td.rating-hold:before {
     @include icon('0268-minus',5px,12px,12px,left);
   }
+
+  td.video-title:before {
+    @include icon('0020-film',3px,16px,16px,left);
+    margin-right: 5px;
+  }
+
   .games {
     .flag:before {
       margin-right: 10px;
